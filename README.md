@@ -1,4 +1,4 @@
-# flask_demo_expense_tracking
+# Flask Demo Expense Tracking
 Just a simple flask app that is used to track expenses. 
 Stores each expenses in json files. It creates a directory for the output if the directory does not exist.
 
@@ -38,3 +38,6 @@ localhost:<port on your host>
 docker build my_expense_app .
 docker run -v /Users/admas/project/expense/app:/my_flask_app/app -p 8585:8889 -d my_expense_app
 ```
+
+##### Home Page Preview
+![Alt text](/home_page.jpg?raw=true "Home Page Preview")
