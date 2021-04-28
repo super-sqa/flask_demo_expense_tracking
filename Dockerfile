@@ -7,7 +7,10 @@ RUN apt-get update && apt-get install --no-install-recommends -y python3.8 pytho
 
 # create a dicrectory for our app
 RUN mkdir /my_flask_app
-COPY . /my_flask_app
+# COPY . /my_flask_app
+COPY ./app /my_flask_app/app
+COPY ./run.py /my_flask_app/run.py
+COPY ./requirements.txt /my_flask_app/requirements.txt
 
 # change working directory
 WORKDIR /my_flask_app
