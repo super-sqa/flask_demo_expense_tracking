@@ -24,11 +24,14 @@ def trackExpense():
         if expense_date:
             record_date = expense_date
         else:
-            record_date = datetime.now().date().strftime('%Y/%m/%d')
+            record_date = datetime.now().date().strftime('%Y-%m-%d')
         data = {'amount': amount, 'for_what': for_what, 'record_date': record_date}
         file_name = datetime.now().strftime('%Y%m%d_%H%M%S') + '.json'
         cur_file_path = pathlib.Path(__file__).parent.absolute()
-        output_path = os.path.join(cur_file_path, 'tracking_data', file_name)
+        output_dir = os.path.join(cur_file_path, 'tracking_data')
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+        output_path = os.path.join(output_dir, file_name)
         if not amount:
             return render_template('track_expense.html')
 
