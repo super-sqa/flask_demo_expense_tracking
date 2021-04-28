@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <center>
+      <div class="jumbotron">
+          <h1><center>Welcome!!!</center></h1>
+          <h2><center>Know Where Your Money Goes!</center></h2>
+      </div>
+        <div class = "tpbutton btn-toolbar text-center" >
+
+             <a class = "btn navbar-btn btn-primary pull-left" style="width:300px; height:200px; margin:5%;margin-left: 170px; padding-top: 80px;" href = {{ url_for('trackExpense')}} target = "_texturepack">
+                 <h3>Add An Expenses</h3>
+             </a>
+
+            <a class = "btn navbar-btn btn-success pull-right" style="width:300px; height:200px; margin:5%; padding-top: 80px;" href = "#" target = "_texturepack">
+                <h3>View Expenses</h3>
+            </a>
+
+         </div>
+    </center>
+
+</div>
+
+
+</body>
+</html>
